@@ -1,1 +1,1 @@
- Flask Web Client-Server Application 
+ Flask Client-Server Web Application 
