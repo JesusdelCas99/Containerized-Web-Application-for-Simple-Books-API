@@ -10,8 +10,10 @@
     <!-- Agrega la referencia a jQuery-->
     <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Agrega la referencia a Socket.io-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
     <!-- Lógica del cliente en el navegador-->
-    <script defer src="../../Frontend/main.js"></script>
+    <script defer src="../static/main.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,7 @@
     
         <div class="row mt-3">
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary" onclick="sendRequest()">
+                <button type="button" class="btn btn-primary" onclick="WebSocketsSendRequest()">
                     Enviar Petición
                 </button>
             </div>
@@ -37,7 +39,7 @@
         <div class="row mt-3">
             <div class="col-md-6">
                 <h4>Resultado:</h4>
-                <p id="result">Jesus</p>
+                <p id="result"></p>
             </div>
         </div>
     </div>
