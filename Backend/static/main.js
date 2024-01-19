@@ -1,20 +1,36 @@
+// CONEXIONES CLIENTE-SERVIDOR
+// ---------------------------------------------------------
+// Conexión WebSockets al servidor 'Flask' (127.0.0.1:5000)
+const socket = io.connect('http://127.0.0.1:5000');
+
+
+// EVENTOS DEL CLIENTE
+// ---------------------------------------------------------
+// Evento 'onclick' del cliente 'check_status_request' (conexión WebSockets al servidor 'Flask')
 function WebSocketsSendRequest() {
-        const mensaje = document.getElementById('requestType').value;
-        socket.emit('check_for_connection_request', mensaje);
+    const mensaje = document.getElementById('requestType').value;
+    socket.emit('check_status_request', mensaje);
 }
 
-// Gestión de eventos del servidor
-function handleServerEvents() {
+
+// EVENTOS DEL SERVIDOR
+// ---------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+    // Eventos del servidor 'Flask'
+    handleServerFlaskEvents();
+});
+
+
+// Eventos del servidor 'Flask'
+function handleServerFlaskEvents(){
+    // Lista de eventos del servidor 'Flask'
+    handleServerStatusEvent()
+}
+
+// (Servidor 'Flask') Evento del servidor 'check_status_response' (conexión WebSockets)
+function handleServerStatusEvent() {
     const timestamp = new Date().toLocaleTimeString();
-    socket.on('check_for_connection_response', (data) => {
+    socket.on('check_status_response', (data) => {
     document.getElementById('result').innerHTML += `${timestamp} - ${data}<br>`;
     });
 }
-
-// Establish the WebSocket connection
-const socket = io.connect('http://127.0.0.1:5000');
-
-// Llama a la función handleServerEvents al final del DOM cargado
-document.addEventListener('DOMContentLoaded', function () {
-    handleServerEvents();
-});
