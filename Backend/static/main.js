@@ -31,6 +31,6 @@ function handleServerFlaskEvents(){
 function handleServerStatusEvent() {
     const timestamp = new Date().toLocaleTimeString();
     socket.on('check_status_response', (data) => {
-    document.getElementById('result').innerHTML += `${timestamp} - ${data}<br>`;
+    document.getElementById('result').innerHTML += `${timestamp} - (simple-books-api) Status: ${data}<br>`;
     });
 }
