@@ -1,36 +1,28 @@
-// CONEXIONES CLIENTE-SERVIDOR
+// Client-Server connections
 // ---------------------------------------------------------
-// Conexión WebSockets al servidor 'Flask' (127.0.0.1:5000)
+// Establish WebSocket connection to 'Flask' server on 127.0.0.1:5000
 const socket = io.connect('http://127.0.0.1:5000');
 
-
-// EVENTOS DEL CLIENTE
+// Client Events
 // ---------------------------------------------------------
-// Evento 'onclick' del cliente 'check_status_request' (conexión WebSockets al servidor 'Flask')
+// Client 'onclick' WebSocket event 'check_status_request'
 function WebSocketsSendRequest() {
     const mensaje = document.getElementById('requestType').value;
     socket.emit('check_status_request', mensaje);
 }
 
-
-// EVENTOS DEL SERVIDOR
+// Server Events
 // ---------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-    // Eventos del servidor 'Flask'
-    handleServerFlaskEvents();
+    // Server WebSockets event 'check_status_response'
+    handleServerStatusEvent();
 });
 
 
-// Eventos del servidor 'Flask'
-function handleServerFlaskEvents(){
-    // Lista de eventos del servidor 'Flask'
-    handleServerStatusEvent()
-}
-
-// (Servidor 'Flask') Evento del servidor 'check_status_response' (conexión WebSockets)
+// Server WebSockets event 'check_status_response'
 function handleServerStatusEvent() {
     const timestamp = new Date().toLocaleTimeString();
     socket.on('check_status_response', (data) => {
-    document.getElementById('result').innerHTML += `${timestamp} - (simple-books-api) Status: ${data}<br>`;
+        document.getElementById('result').innerHTML += `${timestamp} - (simple-books-api) Status: ${data}<br>`;
     });
 }
