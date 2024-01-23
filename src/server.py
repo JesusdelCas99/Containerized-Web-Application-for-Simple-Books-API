@@ -3,16 +3,25 @@ from flask_socketio import SocketIO
 import requests
 import json
 
+
 app = Flask(__name__)
 socketio = SocketIO(app)
 
 
-# Ruta para servir la página HTML
+'''
+Default route ('/'): 
+This route directs users to 'index.html' page                        
+'''
 @app.route('/')
 def index():
     return render_template('index.html')
     
 
+"""
+Server-side event handler for a Socket.IO connection:
+* Server listens for 'check_status_request' WebSocket event
+* Server emits 'check_status_response' WebSocket event               
+"""
 @socketio.on('check_status_request')
 def handle_check_for_connection(data):
     # Verify connection
@@ -33,8 +42,9 @@ def handle_check_for_connection(data):
         socketio.emit('check_status_response', "'error': 'Failed to fetch data from the API'")
 
 
+# Run application in debug mode
 if __name__ == '__main__':
-    app.run(debug=True)  # Ejecutar la aplicación en modo debug
+    app.run(debug=True) 
 
 
 
