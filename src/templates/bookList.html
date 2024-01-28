@@ -14,14 +14,15 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Agrega la referencia a Socket.io-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
-    <script src="../static/main.js"></script>
+    <!-- Lógica del cliente en el navegador-->
+    <script defer src="../static/main.js"></script>
 </head>
 
 <body>
 <!-- Static design of the document -->  
     <div class="container mt-5">
         <h2>Flask Client-Server Web Application</h2>
-        
+
         <div class="row">
             <div class="col-md-6">
                 <!-- Horizontal line -->
@@ -29,30 +30,56 @@
             </div>
         </div>
         
-    
         <div class="row">
             <div class="col-md-6">
-                <h4>Select request type:</h4>
+                <h4>Request a list of random books:</h4>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>Optional query parameters:</p>
+                <div style="margin-left: 20px; margin-top: 15px;">
+                    <li><b>Type</b> (fiction or non-fiction) <input style="margin-left: 80px; margin-bottom: 15px;" 
+                        id = "typeInput" type="text" placeholder="Enter type"></li>
+                </div>
+                <div style="margin-left: 20px; margin-bottom: 8px;">
+                    <li><b>Limit</b> (a number between 1 and 20) <input style="margin-left: 26px; margin-bottom: 10px;" 
+                        id = "limitInput" type="number" min="1" max="20" placeholder="Enter limit"></li>
+                </div>
+            </div>
+            
         </div>
     
         <div class="row mt-3">
             <div class="col-md-2">
-                <button type="button" class="btn btn-primary" onclick="redirectToPage('/status')">
-                <b>Verify status</b>
+                <button type="button" class="btn btn-primary" onclick="WebSocketsbookListRequest()">
+                    <b>Send request</b>
                 </button>
             </div>
+
             <div class="col-md-2">
-                <button type="button" class="btn btn-primary" onclick="redirectToPage('/bookList')">
-                    <b>Book List</b>
+                <button type="button" class="btn btn-primary" onclick="ClientClearResponse()">
+                    <b>Clear Response</b>
                 </button>
             </div>
+
             <div class="col-md-2">
-                <button type="button" class="btn btn-primary" onclick="redirectToPage()">
-                    Verify status
+                <button type="button" class="btn btn-primary" onclick="redirectToPage('/')">
+                    <b>Back to main page</b>
                 </button>
             </div>
         </div>
+
+        <div class="row mt-3">    
+            <div class="col-md-12">
+                <h5>(Response) List of books:</h5>
+            </div>
+            <div class="col-md-6">
+                <p id="result"></p>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
