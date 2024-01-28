@@ -1,20 +1,25 @@
 /* Client "main.js" JavaScript file */
 
-/* (Client-Server connections) Establish WebSocket connection to the server */
+/* (Client-Server connection) Establish webSocket connection to the server */
 const socket = io.connect('http://127.0.0.1:5000');
 
-/* (Client event) Client 'onclick' event "Clear response"*/
+
+/* (Client event) Client 'onclick' event to clear response*/
 function ClientClearResponse() {
     document.getElementById('result').innerHTML = '';
 }
 
+// (Client event) Client 'onclick' event to redirect to a specific page
+function redirectToPage(url) {
+    window.location.href = url;
+}
 
-/* (Client event) Client 'onclick' WebSocket event 'check_status_request' */
+/* (Client event) Client 'onclick' webSocket event 'check_status_request' */
 function WebSocketsStatusRequest() {
     socket.emit('check_status_request', "dummy text");
 }
 
-/* (Client event) Client 'onclick' WebSocket event 'bookList_request' */
+/* (Client event) Client 'onclick' webSocket event 'bookList_request' */
 function WebSocketsbookListRequest() {
     var typeValue = document.getElementById("typeInput").value;
     var limitValue = document.getElementById("limitInput").value;
@@ -38,20 +43,20 @@ function WebSocketsbookListRequest() {
             return;
         }
     }
-
     socket.emit('bookList_request', typeValue, limitValue);
 }
 
 
-/* Server Events */
+/* Server events handler*/
 document.addEventListener('DOMContentLoaded', function () {
-    /* (Server event) Server WebSockets event 'check_status_response' */
+    /* (Server event) Server webSocket event 'check_status_response' */
     handleServerStatusEvent();
+    /* (Server event) Server webSocket event 'bookList_response' */
     handleServerBookListEvent();
 });
 
 
-/* Server WebSockets event 'check_status_response' */
+/* (Server event) Server webSockets event 'check_status_response' */
 function handleServerStatusEvent() {
     socket.on('check_status_response', (data) => {
         let now = new Date();
@@ -66,6 +71,7 @@ function handleServerStatusEvent() {
     });
 }
 
+/* (Server event) Server webSockets event 'bookList_response' */
 function handleServerBookListEvent() {
     socket.on('bookList_response', (data) => {
         // Parse the JSON data
@@ -89,9 +95,4 @@ function handleServerBookListEvent() {
         // Set the HTML content of the 'result' element to display the generated HTML
         document.getElementById('result').innerHTML = html;
     });
-}
-
-// JavaScript function to redirect to a specific page
-function redirectToPage(url) {
-    window.location.href = url;
 }
