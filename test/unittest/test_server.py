@@ -1,58 +1,61 @@
 import unittest
 from flask import url_for
 import sys
-sys.path.append('./')  # Añadir el directorio raíz del proyecto al sys.path
-from src import server  # Importar el módulo server desde el directorio src
 
-# Flask server class instance
+# Ensure that the root directory of the project is included in the Python path
+sys.path.append('./')
+
+# Import the Flask application
+from src import server
+
+# Rename Flask server instance as 'app'
 app = server.app
 
 class TestServerRoutes(unittest.TestCase):
+    """
+    Test case class for testing the routes of the Flask server.
+    """
+
     def setUp(self):
+        """
+        Set up the test environment before each test case.
+        Sets the Flask application to testing mode and creates a test client for making requests.
+        """
         app.testing = True
         self.app = app.test_client()
 
     def test_index_route(self):
+        """
+        Test case to check the response of the '/' route.
+        Verifies that accessing the '/' route returns a status code of 200 (OK).
+        """
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
 
     def test_status_route(self):
+        """
+        Test case to check the response of the '/status' route.
+        Verifies that accessing the '/status' route returns a status code of 200 (OK).
+        """
         response = self.app.get('/status')
         self.assertEqual(response.status_code, 200)
 
     def test_bookList_route(self):
+        """
+        Test case to check the response of the '/bookList' route.
+        Verifies that accessing the '/bookList' route returns a status code of 200 (OK).
+        """
         response = self.app.get('/bookList')
         self.assertEqual(response.status_code, 200)
 
     def test_bookInfo_route(self):
+        """
+        Test case to check the response of the '/bookInfo' route.
+        Verifies that accessing the '/bookInfo' route returns a status code of 200 (OK).
+        """
         response = self.app.get('/bookInfo')
         self.assertEqual(response.status_code, 200)
 
-
-'''
-class TestSocketIOEvents(unittest.TestCase):
-    def setUp(self):
-        app.testing = True
-        self.socket_client = app.test_client()
-
-    def test_check_status_socketio_event(self):
-        with app.test_request_context():
-            self.socket_client.emit('check_status_request')
-            received = self.socket_client.get_received()
-            self.assertTrue(any(data['name'] == 'check_status_response' for data in received))
-
-    def test_bookList_socketio_event(self):
-        with app.test_request_context():
-            self.socket_client.emit('bookList_request', {'typeValue': 'fiction', 'limitValue': 10})
-            received = self.socket_client.get_received()
-            self.assertTrue(any(data['name'] == 'bookList_response' for data in received))
-
-    def test_bookInfo_socketio_event(self):
-        with app.test_request_context():
-            self.socket_client.emit('bookInfo_request', {'bookId': 1})
-            received = self.socket_client.get_received()
-            self.assertTrue(any(data['name'] == 'bookInfo_response' for data in received))
-'''
-
 if __name__ == '__main__':
     unittest.main()
+
