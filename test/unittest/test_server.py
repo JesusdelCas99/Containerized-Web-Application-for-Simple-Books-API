@@ -1,7 +1,7 @@
 import unittest
 from flask import url_for
 import sys
-sys.path.append('../../')  # Añadir el directorio raíz del proyecto al sys.path
+sys.path.append('./')  # Añadir el directorio raíz del proyecto al sys.path
 from src import server  # Importar el módulo server desde el directorio src
 
 # Flask server class instance
