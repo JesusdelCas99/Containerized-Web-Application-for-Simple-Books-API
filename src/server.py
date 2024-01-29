@@ -16,7 +16,7 @@ def index():
 
 # Route ('/status'): Returns API Status                        
 @app.route('/status')
-def status():
+def BookStatus():
     return render_template('status.html')
 
 
