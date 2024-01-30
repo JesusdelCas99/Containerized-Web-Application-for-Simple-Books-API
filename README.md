@@ -17,7 +17,7 @@ Simple Books API Web Client Application.
    - Using `environment.yml`:
      ```
      conda env create -f environment.yml
-     conda activate <environment_name>
+     conda activate dapt
      ```
 
     
@@ -35,7 +35,9 @@ Run the Flask server by executing the following command:
 
 The project includes unit tests for the server functionality. These tests ensure that the server routes return the expected responses and handle various scenarios correctly. You can find the unit tests in the tests/unittest/ directory. To run the unit tests, execute the following command:
 
-        python -m unittest discover -s tests/unittest/
+   ```
+   python -m unittest discover -s tests/unittest/
+   ```
 
 ### Additional Information:
 
