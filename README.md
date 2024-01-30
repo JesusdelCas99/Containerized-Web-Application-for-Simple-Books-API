@@ -3,19 +3,16 @@
 
 Simple Books API Web Client Application.
 
-### How to Run the Project:
+### How to run the Server:
 
-1. Install Dependencies:
-        You can install the required dependencies using either `requirements.txt` or `environment.yml`. Choose one of the following methods:
+1. Install Dependencies: You can install the required dependencies using either `requirements.txt` or `environment.yml`. Choose one of the following methods:
 
 - Using requirements.txt:
 
-        bash
         pip install -r requirements.txt
 
 - Using environment.yml:
         
-        bash
         conda env create -f environment.yml
         conda activate dapt
 
