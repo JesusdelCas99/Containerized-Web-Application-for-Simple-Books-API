@@ -21,7 +21,7 @@ function WebSocketsStatusRequest() {
 
 /* (Client event) Client 'onclick' webSocket event 'bookInfo_request' */
 function WebSocketsbookInfoRequest(){
-    var bookId = document.getElementById("typeInput").value;
+    var bookId = document.getElementById("limitInput").value;
 
     // Check if the limit value is a valid integer
     if (bookId === ""){

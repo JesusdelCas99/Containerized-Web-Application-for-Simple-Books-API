@@ -14,41 +14,92 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Add reference to Socket.io -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
-    <!-- Client-side logic -->
+    <!-- Client-side logic in the browser -->
     <script defer src="../static/main.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            margin-top: 50px;
+            width: 70%;
+            text-align: left;
+        }
+
+        h2, h4, h5 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border-color: #007bff;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        #result {
+            font-size: 18px;
+        }
+
+        .param-input {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .param-label {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
-<!-- Static design of the document -->  
-    <div class="container mt-5">
+    <div class="container">
         <h2>Simple Books API Web Client</h2>
-
+        
+        <hr class="col-12">
+        
         <div class="row">
-            <div class="col-md-6">
-                <!-- Horizontal line -->
-                <hr>    
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h4>Check simple-books-api status:</h4>
             </div>
         </div>
+
     
         <div class="row mt-3">
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <button type="button" class="btn btn-primary" onclick="WebSocketsStatusRequest()">
                     <b>Send request</b>
                 </button>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <button type="button" class="btn btn-primary" onclick="ClientClearResponse()">
                     <b>Clear response</b>
                 </button>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <button type="button" class="btn btn-primary" onclick="redirectToPage('/')">
                     <b>Back to main page</b>
                 </button>
@@ -57,7 +108,7 @@
 
         <div class="row mt-3">    
             <div class="col-md-12">
-                <h5>Status response:</h5>
+                <h5>(Response) API status:</h5>
             </div>
             <div class="col-md-6">
                 <p id="result"></p>
@@ -67,3 +118,7 @@
     </div>
 </body>
 </html>
+
+
+
+
