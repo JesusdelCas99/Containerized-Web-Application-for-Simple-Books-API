@@ -9,25 +9,25 @@ Simple Books API Web Client Application.
 
    You can install the required dependencies using either `requirements.txt` or `environment.yml`. Choose one of the following methods:
 
-   - **Using `requirements.txt`:**
+   - Using `requirements.txt`:
      ```
      pip install -r requirements.txt
      ```
 
-   - **Using `environment.yml`:**
+   - Using `environment.yml`:
      ```
      conda env create -f environment.yml
      conda activate <environment_name>
      ```
 
     
-3. Launch the Server:
+2. **Launch the Server**
 
 Run the Flask server by executing the following command:
 
         python server.py
     
-- Access the Web Application:
+3. **Access the Web Application**
 
     Once the server is running, you can access the web application by navigating to http://127.0.0.1:5000 in your web browser.
 
