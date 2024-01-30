@@ -23,7 +23,7 @@ Simple Books API Web Client Application.
     
 2. **Launch the Server**
 
-Run the Flask server by executing the following command:
+   Run the Flask server by executing the following command:
 
         python server.py
     
