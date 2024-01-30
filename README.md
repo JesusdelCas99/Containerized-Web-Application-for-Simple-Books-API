@@ -7,13 +7,12 @@ Simple Books API Web Client Application.
 
     1. Install Dependencies:
 
-    You can install the required dependencies using either requirements.txt or environment.yml. Choose one of the following methods:
+You can install the required dependencies using either requirements.txt or environment.yml. Choose one of the following methods:
 
-        Using requirements.txt:
+    - Using requirements.txt:
 
         bash
-
-pip install -r requirements.txt
+        pip install -r requirements.txt
 
 Using environment.yml:
 
