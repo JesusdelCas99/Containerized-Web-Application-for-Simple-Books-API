@@ -6,8 +6,7 @@ Simple Books API Web Client Application.
 ### How to Run the Project:
 
 1. Install Dependencies:
-
-You can install the required dependencies using either requirements.txt or environment.yml. Choose one of the following methods:
+        You can install the required dependencies using either `requirements.txt` or `environment.yml`. Choose one of the following methods:
 
 - Using requirements.txt:
 
