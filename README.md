@@ -5,7 +5,7 @@ Simple Books API Web Client Application.
 
 ### How to Run the Project:
 
-    Install Dependencies:
+    1. Install Dependencies:
 
     You can install the required dependencies using either requirements.txt or environment.yml. Choose one of the following methods:
 
@@ -22,7 +22,7 @@ bash
     conda env create -f environment.yml
     conda activate <environment_name>
 
-Launch the Server:
+2. Launch the Server:
 
 Run the Flask server by executing the following command:
 
