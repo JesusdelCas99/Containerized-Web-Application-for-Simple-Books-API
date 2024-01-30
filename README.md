@@ -1,7 +1,11 @@
 [![test_server](https://github.com/JesusdelCas99/Flask-Web-Client-Server-Application/actions/workflows/test_server.yml/badge.svg)](https://github.com/JesusdelCas99/Flask-Web-Client-Server-Application/actions/workflows/test_server.yml)
 ## Simple Books API Web Client
 
-Simple Books API Web Client Application.
+This project is a web application built with Flask, providing a simple interface to interact with a book database. It allows users to view a list of books, get detailed information about a specific book, and check the status of an external API serving the book data.
+
+The application is designed to interact with the **Simple Books API** hosted at [simple-books-api.glitch.me](https://simple-books-api.glitch.me). This API provides endpoints for retrieving information about books, including their titles, authors, ISBNs, types, prices, and availability status.
+
+For detailed documentation on the API endpoints and how to use them, please refer to the [API documentation](https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md).
 
 ### How to run the Server:
 
