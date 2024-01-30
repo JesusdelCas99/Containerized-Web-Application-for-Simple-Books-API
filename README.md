@@ -6,18 +6,17 @@ Simple Books API Web Client Application.
 ### How to run the Server:
 
 1. Install Dependencies: You can install the required dependencies using either `requirements.txt` or `environment.yml`. Choose one of the following methods:
+        - Using `requirements.txt`:
 
-- Using `requirements.txt`:
+                pip install -r requirements.txt
 
-        pip install -r requirements.txt
-
-- Using `environment.yml`:
+        - Using `environment.yml`:
         
-        conda env create -f environment.yml
-        conda activate dapt
+                conda env create -f environment.yml
+                conda activate dapt
 
     
-2. Launch the Server:
+3. Launch the Server:
 
 Run the Flask server by executing the following command:
 
