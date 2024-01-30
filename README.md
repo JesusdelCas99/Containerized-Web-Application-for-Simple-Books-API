@@ -45,19 +45,19 @@ The project includes unit tests for the server functionality. These tests ensure
 
 ### Additional Information:
 
-- Server Architecture:
+- **Server Architecture**:
         The server is built using Flask, a lightweight web framework for Python.
         It utilizes Socket.IO for real-time communication between the client and server.
 
-- External API Integration:
+- **External API Integration**:
         The server interacts with an external API (https://simple-books-api.glitch.me) to fetch book data.
         It handles requests to endpoints such as /status, /bookList, and /bookInfo.
 
-- Client-Side Interaction:
+- **Client-Side Interaction**:
         The client-side functionality is implemented using JavaScript.
         It establishes WebSocket connections with the server to fetch data asynchronously.
 
-- Folder Structure:
+- **Folder Structure**:
         `src/`: Contains the server code (`server.py`) and static files (e.g., JavaScript).
         `tests/unittest/`: Contains unit tests for the server.
 
