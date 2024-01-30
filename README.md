@@ -58,9 +58,7 @@ The project includes unit tests for the server functionality. These tests ensure
         It establishes WebSocket connections with the server to fetch data asynchronously.
 
 - **Folder Structure**:
-   
-   - `src/`: Contains the server code (`server.py`) and static files (e.g., JavaScript).
-   
-   - `tests/unittest/`: Contains unit tests for the server.
+   `src/`: Contains the server code (`server.py`) and static files (e.g., JavaScript).
+   `tests/unittest/`: Contains unit tests for the server.
 
 Feel free to explore the codebase and contribute to further enhancements or bug fixes!
