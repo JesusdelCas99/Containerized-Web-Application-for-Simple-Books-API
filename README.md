@@ -7,11 +7,11 @@ Simple Books API Web Client Application.
 
 1. Install Dependencies: You can install the required dependencies using either `requirements.txt` or `environment.yml`. Choose one of the following methods:
 
-- Using requirements.txt:
+- Using `requirements.txt`:
 
         pip install -r requirements.txt
 
-- Using environment.yml:
+- Using `environment.yml`:
         
         conda env create -f environment.yml
         conda activate dapt
@@ -21,7 +21,6 @@ Simple Books API Web Client Application.
 
 Run the Flask server by executing the following command:
 
-        bash
         python server.py
     
 - Access the Web Application:
@@ -32,7 +31,6 @@ Run the Flask server by executing the following command:
 
 The project includes unit tests for the server functionality. These tests ensure that the server routes return the expected responses and handle various scenarios correctly. You can find the unit tests in the tests/unittest/ directory. To run the unit tests, execute the following command:
 
-        bash
         python -m unittest discover -s tests/unittest/
 
 ### Additional Information:
@@ -50,7 +48,7 @@ The project includes unit tests for the server functionality. These tests ensure
         It establishes WebSocket connections with the server to fetch data asynchronously.
 
 - Folder Structure:
-        src/: Contains the server code (server.py) and static files (e.g., JavaScript).
-        tests/unittest/: Contains unit tests for the server.
+        `src/`: Contains the server code (`server.py`) and static files (e.g., JavaScript).
+        `tests/unittest/`: Contains unit tests for the server.
 
 Feel free to explore the codebase and contribute to further enhancements or bug fixes!
