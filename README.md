@@ -7,7 +7,7 @@ The application is designed to interact with the **Simple Books API** hosted at 
 
 For detailed documentation on the API endpoints and how to use them, please refer to the [API documentation](https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md).
 
-### How to run the Server
+## Setup
 
 1. **Install Dependencies**
 
@@ -35,7 +35,7 @@ For detailed documentation on the API endpoints and how to use them, please refe
 
     Once the server is running, you can access the web application by navigating to http://127.0.0.1:5000 in your web browser.
 
-### Unit Testing
+## Unit Testing
 
 The project includes unit tests for the server functionality. These tests ensure that the server routes return the expected responses and handle various scenarios correctly. You can find the unit tests in the `tests/unittest/` directory. To run the unit tests, execute the following command:
 
@@ -43,7 +43,7 @@ The project includes unit tests for the server functionality. These tests ensure
    python test/unittest/test_server.py
    ```
 
-### Additional Information
+## Additional Information
 
 - **Server Architecture**:
         The server is built using Flask, a lightweight web framework for Python.
