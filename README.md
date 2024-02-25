@@ -1,5 +1,5 @@
 [![test_server](https://github.com/JesusdelCas99/Flask-Web-Client-Server-Application/actions/workflows/test_server.yml/badge.svg)](https://github.com/JesusdelCas99/Flask-Web-Client-Server-Application/actions/workflows/test_server.yml)
-## Simple Books API MVC (Model-View-Controller) Application
+## Simple Books API MVC (Model-View-Controller) application
 
 This project is a web application built with Flask, providing a simple interface to interact with an external API. It allows users to view a list of books, get detailed information about a specific book, and check the status of an external API serving the book data.
 
