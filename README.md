@@ -11,7 +11,7 @@ For detailed documentation on the API endpoints and how to use them, please refe
 
 1. **Install Dependencies**
 
-   You can install the required dependencies using either `requirements.txt` or `environment.yml`. Choose one of the following methods:
+   You can install the required dependencies using either `requirements.txt` or `environment.yml`:
 
    - Using `requirements.txt`:
      ```
@@ -27,13 +27,15 @@ For detailed documentation on the API endpoints and how to use them, please refe
     
 2. **Launch the Server**
 
-   Run the Flask server by executing the following command:
+   Once you have installed the required packages, you can run the application using Docker Compose: 
 
-        python server.py
+        docker-compose up
+
+   This command will build the Docker image and start the Flask application.
     
-3. **Access the Web Application**
+4. **Access the Web Application**
 
-    Once the server is running, you can access the web application by navigating to http://127.0.0.1:5000 in your web browser.
+    Once the server is running, you can access the web application by navigating to http://192.168.10.40:5000 in your web browser.
 
 ## Unit Testing
 
