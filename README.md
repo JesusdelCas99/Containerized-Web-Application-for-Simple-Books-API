@@ -9,6 +9,8 @@ For detailed documentation on the API endpoints and how to use them, please refe
 
 ## Setup in Linux
 
+Project setup for Linux:
+
 1. **Install Dependencies**
 
    You can install the required dependencies using either `requirements.txt` or `environment.yml`:
