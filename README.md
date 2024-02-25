@@ -27,7 +27,7 @@ For detailed documentation on the API endpoints and how to use them, please refe
     
 2. **Launch the Server**
 
-   Once you have installed the required packages, you can run the application using Docker Compose: 
+   Once you have the required packages, you can run the application using Docker Compose. Make sure you have Docker Compose installed on your system before proceeding:
 
         docker-compose up
 
