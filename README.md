@@ -25,7 +25,7 @@ For detailed documentation on the API endpoints and how to use them, please refe
      ```
 
     
-2. **Launch the Server**
+2. **Launch Server**
 
    Once you have the required packages, you can run the application using Docker Compose. Make sure you have Docker Compose installed on your system before proceeding:
 
@@ -33,7 +33,7 @@ For detailed documentation on the API endpoints and how to use them, please refe
 
    This command will build the Docker image and start the Flask application.
     
-4. **Access the Web Application**
+4. **Access Web Application**
 
     Once the server is running, you can access the web application by navigating to http://192.168.10.40:5000 in your web browser.
 
