@@ -7,7 +7,7 @@ The application is designed to interact with the **Simple Books API** hosted at 
 
 For detailed documentation on the API endpoints and how to use them, please refer to the [API documentation](https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md).
 
-## Setup
+## Setup in Linux
 
 1. **Install Dependencies**
 
