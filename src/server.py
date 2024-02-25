@@ -2,10 +2,12 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO
 import requests
 import json
+from flask_cors import CORS  # Import CORS from flask_cors
 
 
 app = Flask(__name__)
 socketio = SocketIO(app)
+CORS(app, origins='*')
 
 
 # Default route ('/')
@@ -115,7 +117,7 @@ def handle_bookInfo(bookId):
 
 # Run application in debug mode
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(host='192.168.10.40')
 
 
 

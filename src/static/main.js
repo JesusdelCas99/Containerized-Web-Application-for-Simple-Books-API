@@ -1,7 +1,7 @@
 /* Client "main.js" JavaScript file */
 
 /* (Client-Server connection) Establish webSocket connection to the server */
-const socket = io.connect('http://127.0.0.1:5000');
+const socket = io.connect('http://192.168.10.40:5000');
 
 
 /* (Client event) Client 'onclick' event to clear response*/

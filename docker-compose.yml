@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  flask-app:
+    image: python:3.10
+    volumes:
+      - .:/tmp
+    ports:
+      - "5000:5000"
+    command: 
+      - /bin/bash
+      - -c
+      - |
+        pip install -r /tmp/requirements.txt
+        python /tmp/src/server.py
+    networks:
+      API:
+        ipv4_address: 192.168.10.40
+
+networks:
+  API:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24
